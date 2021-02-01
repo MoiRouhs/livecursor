@@ -1,0 +1,18 @@
+Cuentos argumentos puede tener punto?
+y,x,color,relleno
+
+array[x,y,ptr,txt]
+      1 2  3   4
+array[xy,ptr,txt]
+       1  2   3
+con simbolos
+
+punto(
+  y:
+  x:
+  cps:[x,y]
+  ptr:
+  txt:)
+
+def punto *a, x:,y:, cps:[x,y],txt:
+

@@ -1,0 +1,21 @@
+d = 1
+c = [1,9,17,25,33,41,49,57]
+(0...ventana.maxy).each do |r|
+  (0...ventana.maxx).each do |e|
+    if rand(30)%20 == 0
+      d = rand(30..33)
+      #d = c.sample
+
+    end
+    ventana.attrset(Curses.color_pair(d * 1))
+    ventana.setpos(r,e)
+    #ventana.addstr(['l','i','n','u','x'].sample)
+    ventana.addstr('+')
+  end
+end
+ventana.setpos(ventana.maxy / 2,ventana.maxx / 2)
+ventana.attrset(Curses.color_pair(7))
+ventana.addstr('GRACIAS')
+
+ventana.attrset(Curses.color_pair(4))
+ventana.box('+','+')

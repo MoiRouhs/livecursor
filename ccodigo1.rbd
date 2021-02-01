@@ -1,0 +1,26 @@
+v1.rdr 
+v1.aa(
+  t:'f', 
+  cps:[9,52], 
+  n:'sw', 
+  c: ['nr','nv','na','nb','nz','nm'].sample,
+  txt:'hola hal')
+v1.aa(t:'d', cps:[4,48], n:'imagenes', c:'nb', txt:'hall')
+v1.aa(
+  t:'d',
+  cps:[(lines / 2) + 6 ,(cols / 2) - 14],
+  n:'circulo',
+  c: 'nr', #['nr','nv','na','nb','nz','nm'].sample,
+  txt: ['1','2','3','4','5','4','3','2'] #hall[1]
+)
+v3.clr v:0
+v3.bb  '($t - (x - y))%64 >> 2'
+v4.clr v:3
+v4.bb ec:'($t + (x + y))%64 >> 2'
+[v1,v4,v3].each do |n|
+  n.refresh
+  n.clear
+end
+sleep 0.5
+#Curses.clear
+#Curses.refresh

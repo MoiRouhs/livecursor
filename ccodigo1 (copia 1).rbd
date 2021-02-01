@@ -1,0 +1,44 @@
+## Manejo de ventanas
+v1.mover( 
+  y:rand(10),
+  x:rand(20))
+v1.redimensionar(
+  y: 10,
+  x:10)
+v1.pintar rand(0..16)
+v1.colocar c:rand(1..4)
+
+v1.bordes(
+  y:["!","|","+"].sample,
+  x:"=")
+v2.ptr rand(17..32)
+v2.clr v: rand(4)
+v2.bdr(
+  y:"|",
+  x:"~")
+
+v3.ptr rand(33..48)
+v3.clr h: rand(4) 
+v3.box("*","*")
+
+v4.ptr rand(49..63)
+v4.mvr(
+  y: rand(1...lines),
+  x:rand(1...cols)) 
+v4.rdr(
+  y: rand(1...lines - 1), 
+  x:rand(1...cols - 1))
+v4.box("+","+")
+
+
+[v1,v2,v3,v4].each do |n|
+  n.refresh
+  n.clear
+end
+
+sleep rand(0.1..0.5)
+if rand(30)%11 == 0
+  Curses.clear
+end
+Curses.refresh
+

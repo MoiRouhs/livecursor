@@ -1,0 +1,7 @@
+m = " "
+t = "iṕda"
+f = 7
+for n in 1..6 do
+  puts m*f + t + m*(n*2) + t
+  f =  f - 1
+end

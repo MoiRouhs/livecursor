@@ -1,0 +1,23 @@
+texto = [' ß ',' & ',' Ø ']
+v1.rdr
+v1.fn(
+  ptr: 0,
+  txt: ' ')
+(fc*20%900).times do |i|
+v1.punto(
+  (fc << 4 & fc * 2)%v1.maxy,
+  i * 3,
+  i%38,
+  texto[fc%texto.length + 1]
+)
+end
+[v1].each do |n|
+  n.refresh
+  n.clear
+end
+
+sleep 0.5
+#if fc %9 == 0
+#  Curses.clear
+#Curses.refresh
+#end

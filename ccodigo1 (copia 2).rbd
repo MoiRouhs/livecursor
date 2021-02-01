@@ -1,0 +1,36 @@
+v1.rdr #m:$t%4
+#v1.bb  d:'v'
+#v1.bb( 
+#  d:'h', 
+#  txt:'7', 
+#  ec:'(y * x * $t)%64', i:4
+#)
+#v1.bb d:'h', txt:'799 +( (x * y ) << 3)%82', ec:'(y + x * $t)%64', i:4
+v1.bb "(x * y + c * $t)%64" , "690 + ( (x * y *  c * $t) << 8)%54"
+v1.pintar 'nb'
+v1.bds '-','|'
+v1.pintar 'bn'
+  v1.cps 5 + (($t << 1)%10), $t%60 + 10
+v1.txt 'hola' 
+
+#v1.bb d:'h', txt:' ', ec:'((c  + $t) >> 3)%42', r:22
+#v1.punto 20,20,8, 'l'
+#v2.clr c:1
+#v2.bb '($t + (y + x))%64 >> 2'
+#
+#v3.clr c:2
+#v3.bb  '($t + (x + y))%64 >> 2'
+#
+#v4.clr c:0
+#v4.bb ec:'($t + (x + y))%64 >> 2'
+#v4.punto 20,20,8, 'La salpicodera'
+
+
+[v1].each do |n|
+  n.refresh
+  n.clear
+end
+
+sleep 0.5
+#Curses.clear
+#Curses.refresh
